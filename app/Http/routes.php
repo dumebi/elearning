@@ -11,11 +11,11 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//
-//});
-
-//Route::auth();
-
 Route::get('/', 'HomeController@index');
+
+Route::auth();
+Route::get('images/{fileName}', 'User\ImageController@index');
+Route::get('pdf/{fileName}', 'HomeController@pdf');
+Route::group(['middleware' => 'auth'], function () {
+
+});

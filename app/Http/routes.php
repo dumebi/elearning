@@ -15,7 +15,8 @@ Route::get('/', 'HomeController@index');
 
 Route::auth();
 Route::get('images/{fileName}', 'User\ImageController@index');
-Route::get('pdf/{fileName}', 'HomeController@pdf');
-Route::group(['middleware' => 'auth'], function () {
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('pdf/{fileName}', 'HomeController@pdf');
+    Route::get('edit', 'User\UserController@edit');
 });

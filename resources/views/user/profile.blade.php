@@ -25,6 +25,10 @@
                             {!! \Carbon\Carbon::createFromFormat('Y-m-d',$auth->dob)->format('d F,Y') !!}
                         </p>
                     </div>
+                    <div class="panel-footer">
+                        <a href="{!! url('/edit') !!}" class="btn btn-primary"><span
+                                    class="glyphicon glyphicon-edit"></span> Edit </a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -20,4 +20,9 @@ class Subject extends Model
     protected $hidden = [
         'created_at', 'updated_at', 'deleted_at'
     ];
+
+    public function books()
+    {
+        return $this->hasMany('App\Book');
+    }
 }

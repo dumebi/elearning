@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Department;
 use App\Http\Requests;
+use App\Subject;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,6 +21,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+//        return User::with(['department', 'subject'])->get();
         if (Auth::check()) {
             $auth = Auth::User();
             return view('user/profile', compact('auth'));

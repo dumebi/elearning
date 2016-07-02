@@ -28,6 +28,11 @@ class User extends Authenticatable
 
     public function department()
     {
-        return $this->belongsTo('App\Department')->whereNotNull('deleted_at');
+        return $this->belongsTo('App\Department');
+    }
+
+    public function subject()
+    {
+        return $this->belongsToMany('App\Subject', 'user_to_subjects');
     }
 }

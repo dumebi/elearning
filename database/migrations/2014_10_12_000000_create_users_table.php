@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
 
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('phone', 11)->nullable();
+            $table->string('phone', 12)->nullable();
             $table->date('dob')->nullable();
 
             $table->string('roll_no');
